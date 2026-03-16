@@ -1,16 +1,31 @@
 DOMAIN,ai.google.dev
-DOMAIN,alkalimakersuite-pa.clients6.google.com
+# --- Gemini & Google AI 核心接口 (优先分流) ---
+DOMAIN,gemini.google.com
+DOMAIN,aistudio.google.com
+DOMAIN,ai.google.dev
 DOMAIN,makersuite.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,alkalimapa-pa.googleapis.com
 DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,clients6.google.com
+
+# --- 身份认证与策略调度 (解决 IP 不一致/弹窗的核心) ---
+DOMAIN,oauthaccountmanager.googleapis.com
+DOMAIN,clientservices.googleapis.com
+DOMAIN,optimizationguide-pa.googleapis.com
+DOMAIN,clients4.google.com
+DOMAIN-KEYWORD,generativelanguage
+
+# --- 关联开发者与资源工具 ---
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
-DOMAIN-KEYWORD,generativelanguage
 DOMAIN,play.google.com
-DOMAIN-SUFFIX,clients6.google.com
-DOMAIN,aistudio.google.com
+
+# --- API 基础链路 (确保与身份校验一致) ---
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.com
